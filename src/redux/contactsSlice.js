@@ -39,11 +39,8 @@ const foundElement = slice.getInitialState().items.findIndex(item => item.id ===
 console.log(foundElement)
 console.log(slice.getInitialState());
 
-export function GetItems() {
-    const items = useSelector(state => state.contacts.items);
-    console.log(items)
-    return items;
-}
+export const item = (state) => state.contacts.items;
+
 
 export default slice.reducer;
 export const { addContact, deleteContact } = slice.actions;
